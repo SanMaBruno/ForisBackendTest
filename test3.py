@@ -48,18 +48,13 @@ def main():
         challenge_instructions = fetch_challenge(token)
         print(f"Instrucciones del desafío: {challenge_instructions}")
         
-        # Basado en las instrucciones del desafío, elige el tipo de dump
         dump_type = "mysql"  # Puede ser 'mysql', 'psql' o 'onlinepsql'
         
         dump_data = fetch_dumps(dump_type, token)
-        # Guardar el dump en un archivo para ser importado en la base de datos local
         with open(f"dump_{dump_type}.sql", "wb") as file:
             file.write(dump_data)
         print(f"Dump {dump_type} guardado en dump_{dump_type}.sql")
         
-        # Aquí debes importar manualmente el dump en tu base de datos local según las instrucciones
-        # Una vez importado, inspecciona la base de datos y realiza la consulta
-
         # Resultados obtenidos de las consultas SQL
         number_of_groups = 168  # Reemplaza con el resultado de la consulta
         answer = 28  # Reemplaza con el resultado de la consulta
