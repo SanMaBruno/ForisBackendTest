@@ -69,18 +69,6 @@ def main():
             file.write(dump_data)
         print(f"Dump {dump_type} guardado en dump_{dump_type}.sql")
         
-        # Aquí debes importar manualmente el dump en tu base de datos local según las instrucciones
-
-        # Una vez importado, puedes continuar con la inspección y el desafío
-
-        # Se asume que tienes acceso al dump y puedes cargarlo para su inspección
-        # dumps = cargar_datos_desde_base_de_datos_local()
-        # number_of_groups = calculate_number_of_groups(dumps)
-        # answer = solve_challenge(dumps)
-        
-        # validation_response = validate_answer(token, number_of_groups, answer)
-        # print(f"Respuesta de validación: {validation_response}")
-        
     except requests.RequestException as e:
         print(f"Error en la solicitud: {e}")
     except KeyError as e:
